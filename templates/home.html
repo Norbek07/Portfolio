@@ -4,6 +4,16 @@
 {% block title %} Portfolio {% endblock title %}
 {% block content %}
 <body>
+    {% if messages %}
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <ul class="messages mb-0">
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endif %}
 
     <!-- wrapper -->
     <div class="mil-wrapper" id="top">
@@ -263,7 +273,7 @@
 
                                     <div class="mil-about-quote">
                                         <div class="mil-avatar mil-up">
-                                            <img src="img/faces/customers/2.jpg" alt="Founder">
+                                            <img src="{% static 'img/faces/customers/2.jpg'%}" alt="Founder">
                                         </div>
                                         <h6 class="mil-quote mil-up">Passionately Creating <span class="mil-thin">Design Wonders:</span> Unleashing <span class="mil-thin">Boundless Creativity</span></h6>
                                     </div>
@@ -275,7 +285,7 @@
                                 <div class="mil-about-photo mil-mb-90">
                                     <div class="mil-lines-place"></div>
                                     <div class="mil-up mil-img-frame" style="padding-bottom: 160%;">
-                                        <img src="img/photo/1.jpg" alt="img" class="mil-scale" data-value-1="1" data-value-2="1.2">
+                                        <img src="{% static 'img/photo/1.jpg'%}" alt="img" class="mil-scale" data-value-1="1" data-value-2="1.2">
                                     </div>
                                 </div>
 
@@ -305,7 +315,7 @@
 
                                 <div class="mil-complex-text justify-content-center mil-up mil-mb-15">
 
-                                    <span class="mil-text-image"><img src="img/photo/2.jpg" alt="team"></span>
+                                    <span class="mil-text-image"><img src="{% static 'img/photo/2.jpg'%}" alt="team"></span>
                                     <h2 class="mil-h1 mil-muted mil-center">Unique <span class="mil-thin">Ideas</span></h2>
 
                                 </div>
@@ -387,7 +397,7 @@
                                         <div class="col-sm-6">
 
                                             <div class="mil-team-card mil-up mil-mb-30">
-                                                <img src="img/faces/1.jpg" alt="Team member">
+                                                <img src="{% static 'img/faces/1.jpg'%}" alt="Team member">
                                                 <div class="mil-description">
                                                     <div class="mil-secrc-text">
                                                         <h5 class="mil-muted mil-mb-5"><a href="home-2.html">Anna Oldman</a></h5>
@@ -403,7 +413,7 @@
                                             </div>
 
                                             <div class="mil-team-card mil-up mil-mb-30">
-                                                <img src="img/faces/3.jpg" alt="Team member">
+                                                <img src="{% static 'img/faces/3.jpg'%}" alt="Team member">
                                                 <div class="mil-description">
                                                     <div class="mil-secrc-text">
                                                         <h5 class="mil-muted mil-mb-5"><a href="home-2.html">Oscar Freeman</a></h5>
@@ -424,7 +434,7 @@
                                             <p class="mil-mobile-hidden mil-text-sm mil-mb-30" style="height: 30px;"><span class="mil-accent">*</span> The founders of our agency</p>
 
                                             <div class="mil-team-card mil-up mil-mb-30">
-                                                <img src="img/faces/2.jpg" alt="Team member">
+                                                <img src="{% static 'img/faces/2.jpg'%}" alt="Team member">
                                                 <div class="mil-description">
                                                     <div class="mil-secrc-text">
                                                         <h5 class="mil-muted mil-mb-5"><a href="home-2.html">Emma Newman</a></h5>
@@ -440,7 +450,7 @@
                                             </div>
 
                                             <div class="mil-team-card mil-up mil-mb-30">
-                                                <img src="img/faces/4.jpg" alt="Team member">
+                                                <img src="{% static 'img/faces/4.jpg'%}" alt="Team member">
                                                 <div class="mil-description">
                                                     <div class="mil-secrc-text">
                                                         <h5 class="mil-muted mil-mb-5"><a href="home-2.html">Lisa Trueman</a></h5>
@@ -562,16 +572,16 @@
                         <div class="swiper-container mil-infinite-show mil-up">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <a href="#." class="mil-partner-frame" style="width: 60px;"><img src="img/partners/1.svg" alt="logo"></a>
+                                    <a href="#." class="mil-partner-frame" style="width: 60px;"><img src="{% static 'img/partners/1.svg'%}" alt="logo"></a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="#." class="mil-partner-frame" style="width: 100px;"><img src="img/partners/2.svg" alt="logo"></a>
+                                    <a href="#." class="mil-partner-frame" style="width: 100px;"><img src="{% static 'img/partners/2.svg'%}" alt="logo"></a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="#." class="mil-partner-frame" style="width: 60px;"><img src="img/partners/1.svg" alt="logo"></a>
+                                    <a href="#." class="mil-partner-frame" style="width: 60px;"><img src="{% static 'img/partners/1.svg'%}" alt="logo"></a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="#." class="mil-partner-frame" style="width: 100px;"><img src="img/partners/2.svg" alt="logo"></a>
+                                    <a href="#." class="mil-partner-frame" style="width: 100px;"><img src="{% static 'img/partners/2.svg'%}" alt="logo"></a>
                                 </div>
                             </div>
                         </div>
